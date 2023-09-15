@@ -68,7 +68,7 @@ class RB1
             z_orientation=odom_msg->pose.pose.orientation.z;
             w_orientation=odom_msg->pose.pose.orientation.w;
             rb1_orientation = calculateYawAngle(w_orientation, x_orientation, y_orientation, z_orientation);
-            ROS_DEBUG("------------------    Updated orientation angle (yaw): %d degrees", rb1_orientation);
+            //ROS_DEBUG("------------------    Updated orientation angle (yaw): %d degrees", rb1_orientation);
             ros::spinOnce();
         }
 
@@ -116,9 +116,9 @@ class RB1
             stop();
 
             // Print the final angle
-            ROS_INFO("orientation angle (yaw): %d degrees", rb1_orientation);
+            ROS_INFO("yaw angle: %d degrees", rb1_orientation);
 
-            res.result = true;
+            res.result = "The rotation of RB1 was succesfull";
             ROS_INFO(">>>>>>>>>>>>>>>>>> Finished service /rotate_robot");
             return true;
         }
