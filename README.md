@@ -23,6 +23,7 @@ roslaunch my_rb1_gazebo my_rb1_robot_warehouse.launch
 ## Rotation service for the RB1 robot
 
 ```
+roslaunch my_rb1_ros rotate_service.launch
 rosservice call /rotate_robot "degrees: -45"
 ```
 
