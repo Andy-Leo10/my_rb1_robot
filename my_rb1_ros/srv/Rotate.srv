@@ -1,0 +1,3 @@
+int32 degrees      # request: specify the number of degrees to rotate
+---
+string result      # response: specifies if the rotation has been completed successfully or not
